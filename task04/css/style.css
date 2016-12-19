@@ -1,0 +1,47 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Microsoft YaHei';
+}
+
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	border: 1px solid #333;
+}
+
+.block {
+	position: relative;
+	height: 200px;
+	width: 400px;
+	background: #ccc;
+
+}
+
+.lefttop, .rightbottom {
+	height: 50px;
+	width: 50px;
+	background: #fc0;
+}
+
+.lefttop {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border-bottom-right-radius: 50px;
+	
+}
+
+.rightbottom {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	border-top-left-radius: 50px;
+}

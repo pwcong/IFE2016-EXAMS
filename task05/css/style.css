@@ -26,6 +26,18 @@ body {
 	width: 40px;
 }
 
+.navbar .title{
+	position: absolute;
+	left: 80px;
+	top: 10px;
+}
+
+.navbar .title a{
+	text-decoration: none;
+	color: white;
+	font-size: 32px;
+}
+
 .navbar .menu{
 	position: absolute;
 	right: 10px;

@@ -1,6 +1,9 @@
 * {
 	margin: 0px;
 	padding: 0px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 
 body {
@@ -15,7 +18,8 @@ div.header {
 
 div.header h1 img {
 	height: 40px;
-	padding: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
 div.header ul {

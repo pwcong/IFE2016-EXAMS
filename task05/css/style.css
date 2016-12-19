@@ -1,0 +1,171 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Microsoft YaHei';
+	background: #dedede;
+}
+
+.navbar {
+	position: relative;
+	height: 60px;
+	background: #333;
+
+}
+
+
+.navbar .logo img{
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 40px;
+}
+
+.navbar .menu{
+	position: absolute;
+	right: 10px;
+	top: 0px;
+}
+
+.navbar .menu ul a {
+	color: white;
+	text-decoration: none;
+	padding: 20px;
+	list-style: none;
+	float: left;
+}
+
+.navbar .menu ul a:hover {
+	border-bottom: 1px solid red;
+}
+
+
+.container {
+
+	padding: 20px;
+
+}
+
+
+.content .artical{
+	box-shadow: 1px 1px 2px 1px #666;
+	padding: 20px;
+	background-color: white;
+}
+
+.content .artical h2, .content .artical h3, .siderbar .item h3{
+	text-align: center;
+	margin: 10px;
+}
+
+
+.content .artical p{
+	text-indent: 2em;
+	line-height: 25px;
+}
+
+.content .artical img{
+	padding: 10px;
+	width: 100%;
+}
+
+
+.siderbar .item-list {
+	padding: 20px;
+	background-color: white;
+	box-shadow: 1px 1px 2px 1px #666;
+}
+
+.siderbar .item form div {
+
+	margin-top: 10px;
+
+}
+
+.siderbar .item form label.tips {
+	margin-right: 10px;
+	text-align: right;
+	float: left;
+	width: 30%;
+}
+
+.siderbar .item form p {
+	color: #aaa;
+	margin-top: 5px;
+	margin-left: 30%;
+	font-size: 14px;
+}
+
+.siderbar .item form div#btn-submit {
+	text-align: center;
+}
+
+.siderbar .item form div#btn-submit input {
+	width: 80%;
+	height: 40px;
+	background-color: orange;
+	border-radius: 5px;
+	border-style: none;
+
+}
+
+.siderbar .item form div#btn-submit input:hover {
+	border: 1px solid #333;
+	background-color: #FFCC00;
+
+}
+
+.footer {
+
+	background: #333;
+	padding: 20px;
+	text-align: center;
+}
+
+.footer p {
+
+	color: white;
+	font-size: 8px;
+
+}
+
+
+@media screen and (max-width: 649px){
+
+	.siderbar {
+		margin-top: 20px;
+	}
+
+}
+
+@media screen and (min-width: 650px){
+
+	.container {
+
+		display: flex;
+		display: -webkit-flex;
+
+	}
+
+	.content {
+
+		min-width: 200px;
+		margin-right: 20px;
+
+		flex: 1;
+		-webkit-flex: 1;
+		-moz-flex: 1;
+		
+	}
+
+	.siderbar {
+		width: 30%;
+		min-width: 350px;
+	}
+
+}

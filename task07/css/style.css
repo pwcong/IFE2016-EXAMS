@@ -1,0 +1,154 @@
+* {
+	margin: 0px;
+	padding: 0px;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+}
+
+body {
+	font-family: 'Microsoft YaHei';
+}
+
+div.navbar {
+	height: 60px;
+	width: 100%;
+	background-color: #dedede;
+}
+
+div.navbar-left {
+
+	position: relative;
+	left: 5%;
+
+	color: #523939;
+
+	vertical-align: middle;
+
+	height: 100%;
+
+	line-height: 60px;
+
+	display: inline-block;
+
+	background: url(../../public/imgs/logo.png) no-repeat left;
+	background-size: 25%;
+
+
+	font-size: 14px;
+
+}
+
+div.navbar-left h1 {
+	margin-left: 50px;
+	cursor: default;
+}
+
+
+div.navbar-right {
+
+	position: relative;
+
+	left: 50%;
+
+	height: 100%;
+
+	vertical-align: middle;
+
+	display: inline-block;
+}
+
+div.navbar-right ul{
+
+	height: 100%;
+
+	list-style: none;
+
+	line-height: 55px;
+
+}
+
+div.navbar-right ul li{
+
+	font-size: 18px;
+	width: 100px;
+	text-align: center;
+	display: inline-block;
+	color: #523939;
+
+	transition: color 0.4s ease-in-out;
+	-webkit-transition: color 0.4s ease-in-out;
+	-moz-transition: color 0.4s ease-in-out;
+
+}
+
+div.navbar-right ul li:hover{
+	color: #FF3C3C;
+}
+
+div.navbar-right ul li.move{
+	position: absolute;
+	border-top: 4px solid #FF3C3C;
+	left: 0px;
+	top: 55px;
+	
+	transition: left 0.4s ease-in-out;
+	-webkit-transition: left 0.4s ease-in-out;
+	-moz-transition: left 0.4s ease-in-out;
+
+}
+
+div.navbar-right ul a:nth-child(1):hover~li.move{
+	left: 0px;
+}
+
+div.navbar-right ul a:nth-child(2):hover~li.move{
+	left: 105px;
+}
+
+div.navbar-right ul a:nth-child(3):hover~li.move{
+	left: 210px;
+}
+
+div.navbar-login{
+	position: relative;
+	left: 55%;
+	width: 100px;
+	line-height: 60px;
+	height: 100%;
+	vertical-align: middle;
+	display: inline-block;
+
+}
+
+div.navbar-login-main{
+	text-align: center;
+	color: #FF3C3C;
+}
+
+
+div.navbar-login div.move {
+	position: absolute;
+	width: 0px;
+	height: 2px;
+	background-color: #FF3C3C;
+	left: 40px;
+	top: 45px;
+
+	transition: width 0.4s ease-in-out;
+	-webkit-transition: width 0.4s ease-in-out;
+	-moz-transition: width 0.4s ease-in-out;
+
+}
+
+
+
+div.navbar-login-main:hover~div.move{
+	width: 40px;
+}
+
+.fa {
+	margin-right: 5px;
+}

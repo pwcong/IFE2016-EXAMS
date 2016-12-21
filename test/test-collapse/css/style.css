@@ -70,6 +70,5 @@ body {
 
 
 .menu-list details.menu li:hover{
-	text-decoration: underline;
 	background-color: orange;
 }

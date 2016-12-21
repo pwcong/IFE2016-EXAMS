@@ -1,0 +1,54 @@
+* {
+	margin: 0px;
+	padding: 0px;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body {
+	padding: 20px;
+	font-family: 'Microsoft YaHei';
+}
+
+.component {
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #999;
+	text-align: center;
+}
+
+
+.component .select {
+	cursor: pointer;
+	width: 150px;
+	border: 1px solid red;
+
+}
+
+.component .select:hover .option{
+	display: block;
+}
+
+.component .select .summary{
+	padding: 10px;
+}
+
+.component .select .option{
+	padding: 10px;
+
+	display: none;
+
+	background-color: #fff;
+
+	transition: background-color 0.3s ease-in-out;
+
+}
+
+
+.component .select .option:hover{
+
+	background-color: orange;
+
+}

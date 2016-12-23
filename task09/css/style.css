@@ -31,7 +31,6 @@ body {
 	width: 30%;
 	height: 100%;
 	line-height: 60px;
-	border: 1px solid red;
 
 	background: url('../../public/imgs/logo_48x48.png') no-repeat left;
 }
@@ -48,7 +47,6 @@ body {
 	line-height: 60px;
 	float: right;
 
-	border: 1px solid red;
 
 	height: 100%;
 	width: 40%;
@@ -100,4 +98,400 @@ body {
 
 .navbar-menu button span{
 	margin-right: 8px;
+}
+
+.content{
+	font-size: 0px;
+}
+
+
+.siderbar {
+	vertical-align: top;
+	display: inline-block;
+	word-spacing: 0px;
+	width: 22%;
+	height: 1000px;
+	background-color: #2b2e3d;	
+}
+
+
+
+.siderbar-top {
+	padding: 15px;
+}
+
+.user-info{
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.user-info img{
+	width: 60px;
+	border-radius: 30px;
+}
+
+.user-info h2{
+	font-size: 18px;
+	margin-left: 20px;
+	color: white;
+
+}
+
+.user-more {
+	margin-top: 20px;
+
+}
+
+.user-more-left{
+
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	border-right: 1px solid grey;
+	color: #608096;
+	transition: : color 0.3s ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out;
+	-moz-transition: color 0.3s ease-in-out;
+}
+
+.user-more-left:hover{
+	color: white;
+}
+
+.user-more-right{
+	text-align: center;
+	display: inline-block;
+	width: 50%;
+	color: #608096;
+	transition: : color 0.3s ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out;
+	-moz-transition: color 0.3s ease-in-out;
+}
+
+.user-more-right:hover{
+	color: white;
+}
+
+.user-more p{
+
+	
+	font-size: 16px;
+
+
+}
+
+
+.user-more p#tips{
+	font-size: 14px;
+}
+
+.siderbar-list {
+	padding: 10px 0px;
+}
+
+.siderbar-list ul{
+	font-size: 16px;
+	list-style: none;
+}
+
+.siderbar-list > ul > li{
+
+	color: #608096;
+
+	border-style: none;
+
+	padding: 20px 0px 20px 40px;
+	background: none;
+
+	transition: background 0.3s ease-in-out;
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+
+	
+	transition: color 0.3s ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out;
+	-moz-transition: color 0.3s ease-in-out;
+}
+
+.siderbar-list ul li span{
+	margin-right: 10px;
+}
+
+.siderbar-list > ul > li:hover{
+	background: #383e4d;
+	cursor: pointer;
+	color: white;
+}
+
+.siderbar-list > ul > li > details[open] > summary{
+	color: white;
+}
+
+.siderbar-list summary::-webkit-details-marker{
+	display: none;
+}
+
+details.parent summary span{
+	margin-right: 10px;
+}
+
+details.child{
+	margin-left: 20px;
+	font-size: 14px;
+}
+
+details.child summary{
+	padding: 8px;
+	color: #608096;
+
+	transition: color 0.3s ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out;
+	-moz-transition: color 0.3s ease-in-out;
+
+}
+
+
+details.child summary:hover{
+	color: white;
+
+}
+
+details.child[open] > summary {
+	color: white;
+}
+
+details.child summary span{
+	transform: rotate(0deg);
+	transition: transform 0.3s ease-in-out;
+	-webkit-transition: transform 0.3s ease-in-out;
+	-moz-transition: transform 0.3s ease-in-out;
+
+}
+
+details.child[open] summary span{
+	transform: rotate(90deg);
+}
+
+details.child ul{
+	list-style: none;
+	margin-left: 20px;
+	
+}
+details.child ul a{
+	text-decoration: none;
+}
+
+details.child ul a li{
+
+	padding: 8px;
+	font-size: 14px;
+	color: #608096;
+
+	transition: color 0.3s ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out;
+	-moz-transition: color 0.3s ease-in-out;
+}
+
+details.child ul a li:hover{
+	color: white;
+}
+
+.main {
+	font-size: 14px;
+	vertical-align: top;
+	display: inline-block;
+	width: 78%;
+	background-color: #dedede;
+	height: 1000px;
+}
+
+.main .topnav{
+	width: 100%;
+	background-color: white;
+}
+
+.main .topnav span{
+	line-height: 30px;
+	margin-left: 20px;
+	margin-right: 10px;
+	float: left;
+	color: grey;
+}
+
+.main .topnav ul{
+	list-style: none;
+}
+.main .topnav a{
+	text-decoration: none;
+}
+.main .topnav ul li{
+	color: grey;
+	line-height: 30px;
+	display: inline;
+	padding: 5px;
+
+	transition: color 0.3s ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out;
+	-moz-transition: color 0.3s ease-in-out;
+	
+}
+
+.main .topnav ul li:hover{
+	color: #2189c0;
+}
+
+.main .topnav ul li#active{
+	color: #2189c0;
+}
+
+.main-content{
+
+	padding: 25px 30px 10px 30px;
+
+
+}
+
+.main-content-item{
+	margin-bottom: 15px;
+}
+
+.main-content .form{
+	height: 100px;
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px 1px grey;
+}
+
+.main-content .scroll-form{
+
+	font-size: 0px;
+
+}
+
+.main-content .scroll-form .form-item{
+	display: inline-block;
+	height: 80px;
+}
+
+.main-content .scroll-form .form-item-btn-left{
+	width: 5%;
+	padding-right: 5px;
+}
+
+.main-content .scroll-form .form-item-btn-right{
+	width: 5%;
+	padding-left: 5px;
+}
+
+.main-content .scroll-form .form-item-main{
+	width: 12%;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.main-content .scroll-form .form-item-right{
+	width: 18%;
+	padding-left: 10px;
+}
+
+.main-content .scroll-form .form-item-content{
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	box-shadow: 1px 1px 1px 1px grey;
+	border-radius: 2px;
+}
+
+.main-content .scroll-form .form-item-content#active{
+	border-top: 3px solid #2189c0;
+}
+
+.main-content .normal-form{
+	font-size: 0px;
+}
+
+.main-content .normal-form .form-item{
+	display: inline-block;
+	height: 90px;
+	width: 25%;
+}
+
+.main-content .normal-form .form-item-left{
+	padding-right: 20px;
+}
+
+.main-content .normal-form .form-item-right{
+	padding-left: 20px;
+}
+.main-content .normal-form .form-item-main{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.main-content .normal-form .form-item-content{
+	background-color: white;
+	height: 100%;
+	width: 100%;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px 1px grey;
+	border-left: 3px solid orange;
+}
+
+.main-content .third-form{
+	font-size: 0px;
+}
+
+.main-content .third-form .form-item{
+	display: inline-block;
+	height: 300px;
+
+}
+.main-content .third-form .form-item-left{
+	width: 60%;
+	padding-right: 10px;
+}
+
+.main-content .third-form .form-item-right{
+	width: 40%;
+	padding-left: 10px;
+}
+
+.main-content .third-form .form-item-content{
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px 1px grey;
+	width: 100%;
+	height: 100%;
+	background: white;
+}
+
+
+.main-content .forth-form{
+	font-size: 0px;
+}
+
+.main-content .forth-form .form-item{
+	display: inline-block;
+	height: 200px;
+
+}
+.main-content .forth-form .form-item-left{
+	width: 40%;
+	padding-right: 10px;
+}
+
+.main-content .forth-form .form-item-right{
+	width: 60%;
+	padding-left: 10px;
+}
+
+.main-content .forth-form .form-item-content{
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px 1px grey;
+	width: 100%;
+	height: 100%;
+	background: white;
 }

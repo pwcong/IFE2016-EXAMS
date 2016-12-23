@@ -1,0 +1,103 @@
+* {
+	margin: 0px;
+	padding: 0px;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+}
+
+
+body {
+	font-family: "Microsoft YaHei";
+}
+
+.container {
+	width: 100%;
+}
+
+.navbar {
+	height: 60px;
+	background-color: #2189c0;
+	width: 100%;
+}
+
+.navbar-brand {
+
+	float: left;
+	padding-left: 60px;
+	margin-left: 20px;
+	width: 30%;
+	height: 100%;
+	line-height: 60px;
+	border: 1px solid red;
+
+	background: url('../../public/imgs/logo_48x48.png') no-repeat left;
+}
+
+.navbar-brand a{
+	
+	font-size: 14px;
+	text-decoration: none;
+	color: white;
+}
+
+.navbar-menu{
+
+	line-height: 60px;
+	float: right;
+
+	border: 1px solid red;
+
+	height: 100%;
+	width: 40%;
+
+}
+
+.navbar-menu {
+	text-align: right;
+	padding-right: 20px;
+}
+
+.navbar-menu input#search{
+	width: 60%;
+	border-style: none;
+	height: 30px;
+	border-radius: 15px;
+	padding-left: 30px;
+
+	background: url('../../public/icons/grey/Search.png') no-repeat 4% 50%;
+	background-color: white;
+}
+
+
+
+.navbar-menu button {
+
+	border: none;
+
+	border-radius: 5px;
+	
+	padding: 10px;
+	
+	margin-left: 10px;
+	background: none;
+	color: white;
+	font-size: 12px;
+
+	transition: background 0.3s ease-in-out;
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+
+}
+
+.navbar-menu button:hover {
+
+	background: orange;
+	
+}
+
+.navbar-menu button span{
+	margin-right: 8px;
+}

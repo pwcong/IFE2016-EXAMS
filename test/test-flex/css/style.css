@@ -1,0 +1,54 @@
+.container{
+	width: 100%;
+	border: 2px solid black;
+
+
+	height: 500px;
+
+	display: flex;
+	flex-flow: row wrap;
+
+
+	align-content: center;
+
+
+}
+
+
+.block{
+	width: 100px;
+	border: 1px solid red;
+}
+
+
+.a {
+	height: 100px;
+	
+}
+
+.b {
+	height: 80px;
+}
+
+.c {
+	height: 120px;
+}
+
+.d{
+	height: 50px;
+}
+
+.e{
+	height: 150px;
+
+}
+
+.f{
+	width: 120px;
+	height: 40px;
+}
+
+.g{
+	width: 150px;
+	height: 120px;
+}

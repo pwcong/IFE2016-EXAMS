@@ -1,0 +1,61 @@
+* {
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Microsoft YaHei";
+}
+
+
+div.container{
+	padding: 20px;
+	border: 2px solid orange;
+}
+
+
+nav.navbar{
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+
+nav.navbar label.navbar-item{
+	text-align: center;
+	width: 25%;
+	border: 1px solid grey;
+}
+
+
+nav.navbar div.navbar-item-move{
+	position: absolute;
+	bottom: 0px;
+	width: 25%;
+	height: 5px;
+	background-color: #91d4da;
+	margin-left: 0%;
+
+	transition: margin-left 0.3s ease-in-out;
+
+}
+
+nav.navbar label.navbar-item span{
+	line-height: 50px;
+}
+
+nav.navbar input.navbar-item-radio{
+	display: none;
+}
+
+nav.navbar input#navbar-item-radio-1:checked ~ .navbar-item-move{
+	margin-left: 0%;
+}
+nav.navbar input#navbar-item-radio-2:checked ~ .navbar-item-move{
+	margin-left: 25%;
+}
+nav.navbar input#navbar-item-radio-3:checked ~ .navbar-item-move{
+	margin-left: 50%;
+}
+nav.navbar input#navbar-item-radio-4:checked ~ .navbar-item-move{
+	margin-left: 75%;
+}

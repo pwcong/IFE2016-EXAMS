@@ -1,0 +1,107 @@
+* {
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Microsoft YaHei";
+}
+
+
+header.header{
+	position: relative;
+	text-align: center;
+	background-color: #91d4da; 
+
+	-webkit-user-select: none; 
+
+	   -moz-user-select: none; 
+
+	    -ms-user-select: none; 
+
+	        user-select: none;
+}
+
+header.header span.title{
+
+	line-height: 60px;
+	font-size: 32px;
+	color: white;
+}
+
+header.header span.btn-back{
+	color: white;
+	font-size: 24px;
+	line-height: 60px;
+}
+
+header.header span.btn-back span{
+	margin-right: 10px;
+}
+
+div.btn-back-container{
+
+	position: absolute;
+
+	left: 0px;
+	top: 0px;
+
+	width: 100px;
+	height: 60px;
+
+	background-color: none;
+
+	transition: background-color 0.2s ease-in-out;
+
+	
+}
+
+div.btn-back-container:active{
+	background-color: orange;
+
+}
+
+nav.navbar{
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+
+nav.navbar label.navbar-item{
+	text-align: center;
+	width: 25%;
+}
+
+
+nav.navbar div.navbar-item-move{
+	position: absolute;
+	bottom: 0px;
+	width: 25%;
+	height: 5px;
+	background-color: #91d4da;
+	margin-left: 0%;
+
+	transition: margin-left 0.3s ease-in-out;
+
+}
+
+nav.navbar label.navbar-item span{
+	line-height: 50px;
+}
+
+nav.navbar input.navbar-item-radio{
+	display: none;
+}
+
+nav.navbar input#navbar-item-radio-1:checked ~ .navbar-item-move{
+	margin-left: 0%;
+}
+nav.navbar input#navbar-item-radio-2:checked ~ .navbar-item-move{
+	margin-left: 25%;
+}
+nav.navbar input#navbar-item-radio-3:checked ~ .navbar-item-move{
+	margin-left: 50%;
+}
+nav.navbar input#navbar-item-radio-4:checked ~ .navbar-item-move{
+	margin-left: 75%;
+}

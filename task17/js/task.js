@@ -70,7 +70,7 @@ function renderChart() {
     var width = "";
     switch (pageState.nowGraTime){
         case "day":
-            width = "40px";
+            width = "20px";
             break;
         case "week":
             width = "80px";

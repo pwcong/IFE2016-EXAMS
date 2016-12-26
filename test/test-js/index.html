@@ -33,9 +33,19 @@
 
 //    var t;
 //    t = "Hello";
-    var num = Math.random();
-    console.log(Math.round(num*0xffffff));
+//    var num = Math.random();
+//    console.log(Math.round(num*0xffffff));
 
+    var stack = [];
+    stack.push("a");
+    stack.push("b");
+    stack.push("c");
+    stack.pop();
+    stack.shift();
+    stack.unshift("d");
+
+
+    console.log(stack);
 
 </script>
 

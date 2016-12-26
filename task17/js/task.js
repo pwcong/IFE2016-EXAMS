@@ -24,7 +24,7 @@ function getDateStr(dat) {
 function randomBuildData(seed) {
     var returnData = {};
     var dat = new Date("2016-01-01");
-    var datStr = ''
+    var datStr = '';
     for (var i = 1; i < 92; i++) {
         datStr = getDateStr(dat);
         returnData[datStr] = Math.ceil(Math.random() * seed);
@@ -52,7 +52,7 @@ var chartData = {};
 var pageState = {
     nowSelectCity: -1,
     nowGraTime: "day"
-}
+};
 
 /**
  * 渲染图表
@@ -64,30 +64,44 @@ function renderChart() {
 /**
  * 日、周、月的radio事件点击时的处理函数
  */
-function graTimeChange() {
+function graTimeChange(value) {
     // 确定是否选项发生了变化
+    if(pageState["nowGraTime"]==value)
+        return;
 
     // 设置对应数据
+    pageState["nowGraTime"]=value;
+
+
 
     // 调用图表渲染函数
+    renderChart();
 }
 
 /**
  * select发生变化时的处理函数
  */
-function citySelectChange() {
+function citySelectChange(selectedIndex) {
     // 确定是否选项发生了变化
+    if(pageState["nowSelectCity"]==selectedIndex)
+        return;
 
     // 设置对应数据
 
     // 调用图表渲染函数
+    renderChart();
 }
 
 /**
  * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
  */
 function initGraTimeForm() {
-
+    var gra_times = document.getElementsByName("gra-time");
+    for(var i=0;i<gra_times.length;i++){
+        gra_times[i].onclick = function () {
+            graTimeChange(this.value);
+        }
+    }
 }
 
 /**
@@ -96,12 +110,37 @@ function initGraTimeForm() {
 function initCitySelector() {
     // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
 
-    // 给select设置事件，当选项发生变化时调用函数citySelectChange
+    var select = document.getElementById("city-select");
+    select.innerHTML="";
 
+    for(var city in aqiSourceData){
+
+        var option = document.createElement("option");
+        option.innerHTML = city;
+        select.appendChild(option);
+    }
+
+    // 给select设置事件，当选项发生变化时调用函数citySelectChange
+    select.onchange = function () {
+
+        citySelectChange(select.selectedIndex);
+
+    };
 }
 
 /**
  * 初始化图表需要的数据格式
+ */
+
+/* 数据格式演示
+ var aqiSourceData = {
+ "北京": {
+ "2016-01-01": 10,
+ "2016-01-02": 10,
+ "2016-01-03": 10,
+ "2016-01-04": 10
+ }
+ };
  */
 function initAqiChartData() {
     // 将原始的源数据处理成图表需要的数据格式
@@ -112,7 +151,7 @@ function initAqiChartData() {
  * 初始化函数
  */
 function init() {
-    initGraTimeForm()
+    initGraTimeForm();
     initCitySelector();
     initAqiChartData();
 }

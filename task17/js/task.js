@@ -50,14 +50,49 @@ var chartData = {};
 
 // 记录当前页面的表单选项
 var pageState = {
-    nowSelectCity: -1,
+    nowSelectCity: 0,
     nowGraTime: "day"
 };
+
+var nums = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
 
 /**
  * 渲染图表
  */
 function renderChart() {
+
+    var city_select = document.getElementById("city-select");
+    var aqi_chart_wrap = document.getElementsByClassName("aqi-chart-wrap")[0];
+    aqi_chart_wrap.innerHTML = "";
+
+    var data = chartData[city_select.options[pageState.nowSelectCity].innerHTML][pageState.nowGraTime];
+
+    var width = "";
+    switch (pageState.nowGraTime){
+        case "day":
+            width = "40px";
+            break;
+        case "week":
+            width = "80px";
+            break;
+        case "month":
+            width = "100px";
+            break;
+        default:break;
+    }
+    for(var item in data){
+        var div = document.createElement("div");
+        div.className = "aqi-chart-wrap-item";
+        div.innerHTML = "<p>"+item+"</p><p>"+data[item]+"</p>";
+        div.style.height = data[item]+"px";
+        div.style.width = width;
+        div.style.backgroundColor = "#"+nums[Math.round(Math.random()*15)]+nums[Math.round(Math.random()*15)]+
+            nums[Math.round(Math.random()*15)]+nums[Math.round(Math.random()*15)]+
+            nums[Math.round(Math.random()*15)]+nums[Math.round(Math.random()*15)];
+
+        console.log(div.style.color);
+        aqi_chart_wrap.appendChild(div);
+    }
 
 }
 
@@ -72,8 +107,6 @@ function graTimeChange(value) {
     // 设置对应数据
     pageState["nowGraTime"]=value;
 
-
-
     // 调用图表渲染函数
     renderChart();
 }
@@ -87,6 +120,7 @@ function citySelectChange(selectedIndex) {
         return;
 
     // 设置对应数据
+    pageState["nowSelectCity"]=selectedIndex;
 
     // 调用图表渲染函数
     renderChart();
@@ -100,7 +134,7 @@ function initGraTimeForm() {
     for(var i=0;i<gra_times.length;i++){
         gra_times[i].onclick = function () {
             graTimeChange(this.value);
-        }
+        };
     }
 }
 
@@ -125,26 +159,80 @@ function initCitySelector() {
 
         citySelectChange(select.selectedIndex);
 
+
     };
 }
 
 /**
  * 初始化图表需要的数据格式
  */
-
-/* 数据格式演示
- var aqiSourceData = {
- "北京": {
- "2016-01-01": 10,
- "2016-01-02": 10,
- "2016-01-03": 10,
- "2016-01-04": 10
- }
- };
- */
 function initAqiChartData() {
     // 将原始的源数据处理成图表需要的数据格式
     // 处理好的数据存到 chartData 中
+
+    for(var city in aqiSourceData){
+
+        chartData[city] = {};
+
+        var weekCount = 0;
+        var weekIndex = 1;
+        var weekSum = 0;
+
+        var str = "";
+
+        var monthKey = "";
+        var lastKey = "";
+        for(var t1 in aqiSourceData[city]){
+            str = t1.split("-");
+            monthKey = str[0]+"-"+str[1];
+            break;
+        }
+        var monthCount = 0;
+        var monthSum = 0;
+
+        var day = {};
+        var week = {};
+        var month = {};
+
+        for(var d in aqiSourceData[city]){
+            day[d]=aqiSourceData[city][d];
+
+            weekSum += day[d];
+            weekCount++;
+
+            if(weekCount>=7){
+                week["第"+weekIndex+"周"]=weekSum/weekCount;
+                weekIndex++;
+                weekSum=0;
+                weekCount=0;
+            }
+
+            str = d.split("-");
+            lastKey = str[0]+"-"+str[1];
+            monthCount++;
+            monthSum+=day[d];
+            if (monthKey!=(str[0]+"-"+str[1])){
+
+                month[monthKey]=monthSum/monthCount;
+                monthCount=0;
+                monthSum=0;
+                monthKey=str[0]+"-"+str[1];
+
+            }
+
+        }
+        if(weekCount>0)
+            week["第"+weekIndex+"周"]=weekSum/weekCount;
+        month[lastKey] = monthSum/monthCount;
+
+        chartData[city]["day"]=day;
+        chartData[city]["week"]=week;
+        chartData[city]["month"]=month;
+
+
+
+    }
+
 }
 
 /**

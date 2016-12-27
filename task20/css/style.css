@@ -20,19 +20,17 @@ body{
 
 .tools{
     margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .tools-item{
     margin-right: 20px;
-    line-height: 40px;
-    float: left;
 }
 
 #display{
     display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    justify-content: center;
+    flex-flow: row wrap;
     border: 1px solid darkturquoise;
 
 }
@@ -55,17 +53,17 @@ body{
 }
 
 .block{
+    padding:15px;
     display: flex;
     justify-content: center;
-    width: 50px;
     margin:2px;
-    background-color: orange;
+    background-color: #0b6fa2;
+    color: white;
 }
 
 #input-value{
     outline:none;
-    height:30px;
     border: 1px solid deepskyblue;
-    border-radius: 10px;
+    border-radius: 2px;
 
 }

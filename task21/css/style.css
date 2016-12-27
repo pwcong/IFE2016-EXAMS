@@ -36,7 +36,6 @@ body{
 }
 
 .btn{
-
     outline:none;
     border-style: none;
     padding:5px;
@@ -59,7 +58,25 @@ body{
     margin:2px;
     background-color: #0b6fa2;
     color: white;
+    width: 9%;
 }
+
+.block .tips{
+    display: none;
+}
+
+.block:hover{
+    cursor: pointer;
+    background: orange;
+}
+.block:hover .tips{
+    display: block;
+}
+
+.block:hover .value{
+    display: none;
+}
+
 
 #input-value{
     outline:none;

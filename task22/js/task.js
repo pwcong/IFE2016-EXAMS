@@ -80,45 +80,112 @@ function LRD(node,callback) {
 }
 
 
-function createView(parent,node,id) {
+function createView(parent,node) {
+
+
+
     if(node.left){
         var leftDiv = document.createElement("div");
-        if(node.left.id==id)
-            leftDiv.className="node active";
+        leftDiv.className="node";
+        leftDiv.id=node.left.id;
 
-
-        else
-            leftDiv.className="node";
         parent.appendChild(leftDiv);
-        createView(leftDiv,node.left,id);
+
+        createView(leftDiv,node.left);
     }
+
     if(node.right){
         var rightDiv = document.createElement("div");
-        if(node.left.id==id)
-            rightDiv.className="node active";
+        rightDiv.className="node";
+        rightDiv.id=node.right.id;
 
-        else
-            rightDiv.className="node";
         parent.appendChild(rightDiv);
-        createView(rightDiv,node.right,id);
+        createView(rightDiv,node.right);
     }
 }
 
+function displayNode(nodeDivs,queue) {
 
-var tree = initTree();
-var root = document.getElementById("root");
+    var index=0;
 
+    var timer = setInterval(function () {
 
-DLR(tree,function (id) {
-    root.innerHTML="";
-    createView(root,tree,id);
-    console.log(id);
-});
+        for(var i=0;i<nodeDivs.length;i++){
 
 
+            if(nodeDivs[i].id==queue[index])
+                nodeDivs[i].className="node active";
+
+            else
+                nodeDivs[i].className="node";
+        }
+
+        index++;
+    },1000);
+
+    setTimeout(function () {
+        clearInterval(timer);
+
+        for(var i=0;i<nodeDivs.length;i++){
+
+            nodeDivs[i].className="node";
+
+        }
+
+    },queue.length*1000+1000);
+}
+
+function init() {
+
+    var tree = initTree();
+    var container = document.getElementById("container");
+    var root = document.createElement("div");
+    root.className="node";
+    root.id=tree.id;
+    container.appendChild(root);
+
+    createView(root,tree);
+
+    var nodeDivs = document.getElementsByClassName("node");
+
+    var queue = [];
+
+    document.getElementById("btn-dlr").onclick=function () {
+
+        queue = [];
+
+        DLR(tree,function (id) {
+            queue.push(id);
+        });
+
+        displayNode(nodeDivs,queue);
 
 
+    };
+    document.getElementById("btn-ldr").onclick=function () {
+
+        queue = [];
+
+        LDR(tree,function (id) {
+            queue.push(id);
+        });
+
+        displayNode(nodeDivs,queue);
+
+    };
+    document.getElementById("btn-lrd").onclick=function () {
+
+        queue = [];
+
+        LRD(tree,function (id) {
+            queue.push(id);
+        });
+
+        displayNode(nodeDivs,queue);
+    };
+}
 
 
+init();
 
 

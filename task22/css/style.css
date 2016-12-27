@@ -9,7 +9,10 @@
 
 }
 
-.container{
+#container{
+
+    width:100%;
+    height:500px;
 
     display: flex;
     justify-content: center;
@@ -19,16 +22,14 @@
 
 }
 
-#root{
-    width:100%;
-    height: 500px;
-    border:1px solid red;
-
+.tools{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-flow: row nowrap;
+    justify-content: center;
+}
 
+.btn{
+    margin:2px;
+    padding:10px;
 }
 
 .node{
@@ -36,10 +37,12 @@
     align-items: center;
     justify-content: space-around;
     flex-flow: row nowrap;
-    width: 40%;
+    width: 45%;
     height:80%;
     border:1px solid #262626;
+    background-color: #dedede;
 }
+
 
 .active{
     background-color: #0b76ac;

@@ -33,18 +33,29 @@
 }
 
 .node{
-    margin:5px;
-    flex:1;
+    position: relative;
+    margin:10px;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-flow: row nowrap;
-    height:80%;
+    height:90%;
     border:1px solid #262626;
     background-color: #dedede;
+}
+
+.node span{
+    position: absolute;
+    top:0;
+    left:0;
 }
 
 
 .active{
     background-color: #0b76ac;
+}
+
+.result{
+    background-color: orange;
 }

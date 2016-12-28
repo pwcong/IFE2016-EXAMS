@@ -56,23 +56,23 @@ function DLR(node,callback) {
 function LDR(node,callback) {
 
     if(node.left)
-        DLR(node.left);
+        LDR(node.left,callback);
 
     if(callback)
-        callback(node.id,callback);
+        callback(node.id);
 
     if(node.right)
-        DLR(node.right,callback);
+        LDR(node.right,callback);
 
 }
 
 function LRD(node,callback) {
 
     if(node.left)
-        DLR(node.left,callback);
+        LRD(node.left,callback);
 
     if(node.right)
-        DLR(node.right,callback);
+        LRD(node.right,callback);
 
     if(callback)
         callback(node.id);
@@ -120,8 +120,9 @@ function displayNode(nodeDivs,queue) {
                 nodeDivs[i].className="node";
         }
 
-        index++;
-    },1000);
+        if(index<queue.length-1)
+            index++;
+    },500);
 
     setTimeout(function () {
         clearInterval(timer);
@@ -132,7 +133,7 @@ function displayNode(nodeDivs,queue) {
 
         }
 
-    },queue.length*1000+1000);
+    },queue.length*500+1000);
 }
 
 function init() {

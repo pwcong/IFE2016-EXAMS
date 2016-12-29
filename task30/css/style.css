@@ -1,0 +1,101 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.container{
+    width:100%;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid palevioletred;
+}
+
+.input-root{
+    padding:10px;
+}
+
+.input-main{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.input-main span{
+    margin-right: 10px;
+    text-align: center;
+}
+
+.input-main input{
+    padding-left: 10px;
+    width: 250px;
+    height:30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border:1px solid grey;
+    outline:none;
+}
+
+.input-main input:focus{
+    border: 2px solid #23ccfe;
+}
+
+
+.input-main button{
+    padding:5px;
+    width:60px;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+    background-color: #0e90d2;
+    color: white;
+
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+
+}
+
+.input-main button:hover{
+    background-color: #23ccfe;
+}
+
+.input-main button:active{
+    background-color: #0c80ba;
+}
+
+.input-tips span{
+    font-size: 14px;
+    margin-left: 50px;
+    color: grey;
+}
+
+
+span.success{
+    color: limegreen;
+}
+
+input.success{
+    border: 2px solid limegreen;
+    color: limegreen;
+}
+
+span.error{
+    color: #CE3C39;
+}
+
+input.error{
+    border: 2px solid #CE3C39;
+    color: #CE3C39;
+}

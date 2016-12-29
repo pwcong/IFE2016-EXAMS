@@ -12,7 +12,7 @@ body{
     height: 560px;
     float: left;
     position: relative;
-    background: url(../../public/imgs/banner.jpg) no-repeat;
+    background: url(../../../public/imgs/banner.jpg) no-repeat;
     background-size: cover;
 }
 #section-6 .left .mes{
@@ -50,7 +50,7 @@ body{
     border-style: solid;
     border-color: transparent #fff transparent transparent;
     top: 250px;
-    left: 10%;
+    right:0;
     margin-left: -60px;
 }
 #section-6 .right{

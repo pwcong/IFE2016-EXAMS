@@ -501,7 +501,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // if ($html.width() >= window.innerWidth) return;
 	  // var scrollbarWidth = window.innerWidth - $html.width();
 	  var $measure = $('<div ' +
-	  'style="width: 100px;height: 100px;overflow: scroll;' +
+	  'css="width: 100px;height: 100px;overflow: scroll;' +
 	  'position: absolute;top: -9999px;"></div>');
 
 	  $(document.body).append($measure);
@@ -7337,7 +7337,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function IScroll(el, options) {
 	  this.wrapper = typeof el == 'string' ? document.querySelector(el) : el;
 	  this.scroller = this.wrapper.children[0];
-	  this.scrollerStyle = this.scroller.style;		// cache style for better performance
+	  this.scrollerStyle = this.scroller.style;		// cache css for better performance
 
 	  this.options = {
 
@@ -9075,7 +9075,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'position': 'relative'
 	      });
 
-	      // Zepto doesn't recognize `webkitTransform..` style
+	      // Zepto doesn't recognize `webkitTransform..` css
 	      this.el.css({
 	        '-webkit-transform-origin': '0% 0%',
 	        '-moz-transform-origin': '0% 0%',
@@ -9485,7 +9485,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // $popCaret.css({top: (popHeight / 2 - popCaretSize / 2) + 'px'});
 	  }
 
-	  // Apply position style
+	  // Apply position css
 	  $popover.css({top: popTop + 'px', left: popLeft + 'px'});
 	};
 
@@ -9847,7 +9847,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   */
 
 	  NProgress.getPositioningCSS = function() {
-	    // Sniff on document.body.style
+	    // Sniff on document.body.css
 	    var bodyStyle = document.body.style;
 
 	    // Sniff prefixes
@@ -11728,7 +11728,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	QRCode.prototype.createTable = function(qrCodeAlg) {
 	  //创建table节点
 	  var s = [];
-	  s.push('<table style="border:0px; margin:0px; padding:0px; border-collapse:collapse; background-color: ' +
+	  s.push('<table css="border:0px; margin:0px; padding:0px; border-collapse:collapse; background-color: ' +
 	  this.options.background +
 	  ';">');
 	  // 计算每个节点的长宽；取整，防止点之间出现分离
@@ -11751,12 +11751,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  // 绘制二维码
-	  foreTd = '<td style="border:0px; margin:0px; padding:0px; width:' + tileW + 'px; background-color: ' + this.options.foreground + '"></td>',
-	    backTd = '<td style="border:0px; margin:0px; padding:0px; width:' + tileW + 'px; background-color: ' + this.options.background + '"></td>',
+	  foreTd = '<td css="border:0px; margin:0px; padding:0px; width:' + tileW + 'px; background-color: ' + this.options.foreground + '"></td>',
+	    backTd = '<td css="border:0px; margin:0px; padding:0px; width:' + tileW + 'px; background-color: ' + this.options.background + '"></td>',
 	    l = qrCodeAlg.getModuleCount();
 
 	  for (var row = 0; row < l; row++) {
-	    s.push('<tr style="border:0px; margin:0px; padding:0px; height: ' + tileH + 'px">');
+	    s.push('<tr css="border:0px; margin:0px; padding:0px; height: ' + tileH + 'px">');
 	    for (var col = 0; col < l; col++) {
 	      s.push(qrCodeAlg.modules[row][col] ? foreTd : backTd);
 	    }
@@ -11781,9 +11781,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      + 'width="' + this.options.width + 'px" height="' + this.options.height + 'px" '
 	      + 'viewbox="0 0 ' + moduleCount * 10 + ' ' + moduleCount * 10 * scale + '">',
 	    rectHead = '<path ',
-	    foreRect = ' style="stroke-width:0.5;stroke:' + this.options.foreground
+	    foreRect = ' css="stroke-width:0.5;stroke:' + this.options.foreground
 	      + ';fill:' + this.options.foreground + ';"></path>',
-	    backRect = ' style="stroke-width:0.5;stroke:' + this.options.background
+	    backRect = ' css="stroke-width:0.5;stroke:' + this.options.background
 	      + ';fill:' + this.options.background + ';"></path>';
 
 	  // draw in the svg

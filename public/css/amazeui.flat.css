@@ -127,7 +127,7 @@ abbr[title] {
   border-bottom: 1px dotted;
 }
 /**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ * Address css set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
 b,
 strong {
@@ -264,8 +264,8 @@ input {
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
+ * Correct `button` css inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` css inheritance in Firefox.
  */
 button,
 select {
@@ -274,8 +274,8 @@ select {
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
  *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
+ * 2. Correct inability to css clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor css between image-type
  *    `input` and others.
  */
 button,
@@ -288,7 +288,7 @@ input[type="submit"] {
   /* 3 */
 }
 /*
- * 1. Improves consistency of cursor style for clickable elements
+ * 1. Improves consistency of cursor css for clickable elements
  * 2. Removes excess padding in IE 8/9.
  * 3. Address box sizing set to `content-box` in IE 8/9/10.
  */
@@ -318,8 +318,8 @@ input::-moz-focus-inner {
   padding: 0;
 }
 /**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
+ * Fix the cursor css for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor css of the
  * decrement button to change from `default` to `text`.
  */
 input[type="number"]::-webkit-inner-spin-button,
@@ -4634,7 +4634,7 @@ a.am-close:hover {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -4684,8 +4684,8 @@ a.am-close:hover {
   text-align: center;
   /**
    * Hover
-   * 1. Apply hover style also to focus state
-   * 2. Remove default focus style
+   * 1. Apply hover css also to focus state
+   * 2. Remove default focus css
    */
   /* Active */
 }
@@ -8867,7 +8867,7 @@ ul.am-dropdown-content > .am-disabled > a:focus {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -8929,7 +8929,7 @@ ul.am-dropdown-content > .am-disabled > a:focus {
 .am-slider-default .am-pauseplay a::before {
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -9959,7 +9959,7 @@ TODO:
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -10426,7 +10426,7 @@ label.am-radio {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -10597,7 +10597,7 @@ label.am-radio {
   }
 }
 
-// Form inline style
+// Form inline css
 .@{ns}form-inline .@{ns}checkbox,
 .@{ns}form-inline .@{ns}radio {
   padding-left: 24px;
@@ -10936,7 +10936,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -10952,7 +10952,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -11315,7 +11315,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -11366,7 +11366,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -11424,7 +11424,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -11491,7 +11491,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -12142,7 +12142,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -12516,7 +12516,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -13407,7 +13407,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -13498,7 +13498,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -13582,7 +13582,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -13669,7 +13669,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -13911,7 +13911,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -14013,7 +14013,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;
@@ -14119,7 +14119,7 @@ tbody.am-collapse.am-in {
   display: inline-block;
   font: normal normal normal 1.6rem/1 "FontAwesome", sans-serif;
   /*font-weight: normal; // 2
-  font-style: normal; // 2
+  font-css: normal; // 2
   vertical-align: baseline; // 3
   line-height: 1; // 4*/
   font-size: inherit;

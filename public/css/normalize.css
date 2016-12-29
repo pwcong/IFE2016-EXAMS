@@ -159,7 +159,7 @@ samp {
 }
 
 /**
- * Add the correct font style in Android 4.3-.
+ * Add the correct font css in Android 4.3-.
  */
 
 dfn {
@@ -283,7 +283,7 @@ select { /* 1 */
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
  *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Correct the inability to css clickable types in iOS and Safari.
  */
 
 button,
@@ -372,7 +372,7 @@ textarea {
 }
 
 /**
- * Correct the cursor style of increment and decrement buttons in Chrome.
+ * Correct the cursor css of increment and decrement buttons in Chrome.
  */
 
 [type="number"]::-webkit-inner-spin-button,
@@ -382,7 +382,7 @@ textarea {
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
+ * 2. Correct the outline css in Safari.
  */
 
 [type="search"] {
@@ -400,7 +400,7 @@ textarea {
 }
 
 /**
- * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 1. Correct the inability to css clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
 

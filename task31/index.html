@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>IFE-2016 Task 31</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="../public/css/normalize.css" type="text/css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="radio-root">
+
+        <div class="radio-item">
+            <input type="radio" id="radio-role-student" name="role" checked="checked">在校生
+        </div>
+        <div class="radio-item">
+            <input type="radio" id="radio-role-other" name="role">非在校生
+        </div>
+    </div>
+
+    <div class="radio-result">
+
+        <div id="radio-result-select">
+
+            <span>在读学校</span>
+
+            <select name="city" id="select-city">
+                <option value="beijing">北京</option>
+                <option value="shenzhen">深圳</option>
+            </select>
+            <select name="school" id="select-school">
+                <option value="beijingdaxue">北京大学</option>
+                <option value="qinghuadaxue">清华大学</option>
+            </select>
+        </div>
+
+        <div class="disable" id="radio-result-input">
+            <span>工作单位</span>
+            <input type="text" id="input-workspace" name="workspace">
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="./js/task.js"></script>
+
+</body>
+</html>

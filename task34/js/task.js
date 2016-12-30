@@ -148,6 +148,59 @@ function checkCommand(command,callback) {
             }
 
             break;
+
+        case "TRA":
+
+            switch (arg){
+
+                case "LEF":
+                    if(step.col-1>=0)
+                        step.col -= 1;
+                    break;
+                case "TOP":
+                    if(step.row-1>=0)
+                        step.row -= 1;
+                    break;
+                case "RIG":
+                    if(step.col+1<config.col)
+                        step.col += 1;
+                    break;
+                case "BOT":
+                    if(step.row+1<config.row)
+                        step.row += 1;
+                    break;
+                default:break;
+            }
+
+            break;
+        case "MOV":
+            switch (arg){
+
+                case "LEF":
+                    step.direction = direction.indexOf("left");
+                    if(step.col-1>=0)
+                        step.col -= 1;
+                    break;
+                case "TOP":
+                    step.direction = direction.indexOf("top");
+                    if(step.row-1>=0)
+                        step.row -= 1;
+                    break;
+                case "RIG":
+                    step.direction = direction.indexOf("right");
+                    if(step.col+1<config.col)
+                        step.col += 1;
+                    break;
+                case "BOT":
+                    step.direction = direction.indexOf("down");
+                    if(step.row+1<config.row)
+                        step.row += 1;
+                    break;
+                default:break;
+            }
+
+            break;
+
         default:break;
 
     }

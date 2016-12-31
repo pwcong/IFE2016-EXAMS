@@ -1,0 +1,105 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+#container{
+    position: relative;
+    padding: 20px;
+    height: 2000px;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+
+#mask-layer{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    opacity: 0;
+    background: black;
+    z-index: -8;
+
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+
+}
+
+.active#mask-layer{
+    z-index: 8;
+    opacity: 0.6;
+}
+
+#float-layer{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    display: flex;
+    z-index: -10;
+    justify-content: center;
+    align-items: center;
+}
+
+.active#float-layer{
+    z-index: 10;
+}
+
+#float-layer-main{
+    position: relative;
+    top: -100px;
+    width: 22%;
+    height: 60%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+    opacity: 0;
+
+    padding:10px;
+
+    -webkit-transition: top 0.4s, opacity 0.4s;
+    -moz-transition: top 0.4s, opacity 0.4s;
+    -ms-transition: top 0.4s, opacity 0.4s;
+    -o-transition: top 0.4s, opacity 0.4s;
+    transition: top 0.4s, opacity 0.4s;
+
+}
+
+#float-layer-main span{
+    float: right;
+    padding: 10px;
+    background-color: white;
+    border-radius: 3px;
+    color: grey;
+
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -moz-transition: background-color 0.3s, color 0.3s;
+    -ms-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#float-layer-main span:hover{
+    background-color: #CE3C39;
+    color: white;
+}
+
+#float-layer-main span:active{
+    background-color: #a4241f;
+}
+
+
+.active#float-layer-main{
+    opacity: 1;
+    top:0;
+}
+

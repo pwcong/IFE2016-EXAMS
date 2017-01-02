@@ -8,9 +8,33 @@
 
 <script type="text/javascript">
 
-    var array = ["a","b","c"];
-    console.log(array.indexOf("c"));
+    // 定义一个动物类
+    function Animal (name) {
+        // 属性
+        this.name = name || 'Animal';
+        // 实例方法
+        this.sleep = function(){
+            return (this.name + ' is sleeping');
+        }
+    }
+    // 原型方法
+    Animal.prototype.eat = function(food) {
+        return (this.name + ' is eating ' + food);
+    };
 
+    function Cat(name){
+        this.name = name;
+        Animal.call(this);
+    }
+
+
+    //　Test Code
+    var cat = new Cat("cat");
+    console.log(cat.name);
+    console.log(cat.eat('fish'));
+    console.log(cat.sleep());
+    console.log(cat instanceof Animal); //true
+    console.log(cat instanceof Cat); //true
 </script>
 
 </body>

@@ -1,0 +1,29 @@
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+th{
+    position: relative;
+    background-color: #666;
+    color: white;
+    padding:10px 30px 10px 30px;
+    border:1px solid #ccc;
+    cursor: pointer;
+}
+
+th:hover{
+    color: orange;
+}
+
+th span{
+
+    position: absolute;
+    right: 10px;
+}
+
+td{
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+

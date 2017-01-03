@@ -1,0 +1,57 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+#container{
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#table-container{
+    position: relative;
+    text-align: center;
+    overflow: auto;
+    width: 400px;
+    height: 200px;
+
+    border: 2px solid orange;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    background-color: #666;
+    color: white;
+    padding:10px 30px 10px 30px;
+    border:1px solid #ccc;
+    cursor: pointer;
+}
+
+.absolute-left-top{
+    position: absolute;
+    left:0;
+    top:0;
+}
+
+th:hover{
+    color: orange;
+}
+
+
+td{
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+

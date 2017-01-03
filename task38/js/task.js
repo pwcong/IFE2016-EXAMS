@@ -57,6 +57,23 @@ function initData() {
 
 }
 
+function sortByCourse(course) {
+
+    for(var i=0;i<students.length-1;i++){
+
+        for(var j=i+1;j<students.length;j++){
+
+            if(students[i][course]<students[j][course]){
+                var t = students[i];
+                students[i]=students[j];
+                students[j]=t;
+            }
+        }
+
+    }
+
+}
+
 function render() {
     var container = document.getElementById("container");
     container.innerHTML = "";
@@ -78,11 +95,19 @@ function createTableView() {
 
     config.course.forEach(function (course) {
         var th = document.createElement("th");
+        th.onclick = function () {
+            sortByCourse(course)  ;
+            render();
+        };
         th.innerHTML = (translation[course]||course) + '<span class="fa fa-sort"></span>';
         tr_head.appendChild(th);
     });
 
     var th_total = document.createElement("th");
+    th_total.onclick = function () {
+        sortByCourse("total");
+        render();
+    };
     th_total.innerHTML = (translation["total"]||"total") + '<span class="fa fa-sort"></span>';
     tr_head.appendChild(th_total);
 
